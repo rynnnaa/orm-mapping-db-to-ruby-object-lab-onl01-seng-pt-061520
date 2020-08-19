@@ -15,8 +15,6 @@ class Student
     FROM Students
     SQL
     DB[:conn].execute(sql)
-  end
-end
     # retrieve all the rows from the "Students" database
     # remember each row should be a new instance of the Student class
   end

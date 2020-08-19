@@ -66,17 +66,17 @@ class Student
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end
-    
-    def self.all_but_12th
+  end
+  
+  def self.all_but_12th
     sql = <<-SQL 
     SELECT *
     FROM Students
-    WHERE grade <= 11
+    WHERE grade <=
     SQL
     
     DB[:conn].execute(sql).map do |row|
       self.new_from_db(row)
     end
-  end
   end
 end
